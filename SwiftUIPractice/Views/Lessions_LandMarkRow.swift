@@ -18,6 +18,7 @@ struct Lessions_LandMarkRow: View {
             Spacer()
             if landmark.isFavorite {
                 Image(systemName: "star.fill")
+                    .foregroundStyle(.yellow)
             }
         }
     }
@@ -25,17 +26,18 @@ struct Lessions_LandMarkRow: View {
 
 
 #Preview {
+    let landMarks = ModelData().landMarks
     Group {
         Lessions_LandMarkRow(landmark: landMarks[0])
         Lessions_LandMarkRow(landmark: landMarks[1])
     }
 }
 
-#Preview("\(landMarks[0].name)") {
-    Lessions_LandMarkRow(landmark: landMarks[0])
+#Preview("\(ModelData().landMarks[0].name)") {
+    Lessions_LandMarkRow(landmark: ModelData().landMarks[0])
 }
 
-#Preview("\(landMarks[1].name)") {
-    Lessions_LandMarkRow(landmark: landMarks[1])
+#Preview("\(ModelData().landMarks[1].name)") {
+    Lessions_LandMarkRow(landmark: ModelData().landMarks[1])
 }
 

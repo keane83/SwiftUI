@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SwiftUIPracticeApp: App {
+    @State private var modelData = ModelData()
     var body: some Scene {
         WindowGroup {
-            Lession1_CreatingAndCombiningViews()
+//            Lession1_CreatingAndCombiningViews()
+            Lession2_ListAndNavigation()
+                .environment(modelData)
         }
     }
 }

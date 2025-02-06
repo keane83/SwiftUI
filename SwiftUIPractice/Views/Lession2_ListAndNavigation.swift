@@ -15,4 +15,5 @@ struct Lession2_ListAndNavigation: View {
 
 #Preview {
     Lession2_ListAndNavigation()
+        .environment(ModelData())
 }
